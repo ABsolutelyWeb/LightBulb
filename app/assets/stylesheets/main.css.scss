@@ -4,12 +4,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// .navbar {
-//   background: #232526; /* fallback for old browsers */
-//   background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
-//   background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// }
-
 .navbar.transparent.navbar-inverse {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -22,7 +16,8 @@
 
 .navbar-brand.nav-font {
     color: black;
-    font-size: 1.5em;
+    font-size: 1.7em;
+    font-family: "Lobster Two"
 }
 
 .navbar-brand.nav-font:hover {
@@ -31,22 +26,31 @@
 
 .navbar-nav.nav-font li a {
     color: black;
-    font-size: 1.4em;
-    padding-left: 2em;
-    padding-right: 2em;
+    text-align: center;
+    font-family: "Lobster Two";
+    font-size: 1.6em;
+    // padding-left: 2em;
+    // padding-right: 2em;
+    width: 10em;
+    height: 3em;
+    display: block;
+    line-height: 35px;
     -o-transition:.6s;
     -ms-transition:.6s;
     -moz-transition:.6s;
     -webkit-transition:.6s;
-    /* ...and now for the proper property */
     transition: .6s;
 }
 
 #fa-size {
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .navbar-nav.nav-font li a:hover {
     color: white;
     background: rgba(0,0,0, 0.7);
+}
+
+.jumbotron {
+    margin-top: 2em;
 }
