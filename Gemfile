@@ -8,6 +8,7 @@ gem 'sqlite3', group: [:development, :test]
 
 # 3.3.5
 gem 'bootstrap-sass'
+gem 'font-awesome-sass', '4.5.0'
 
 
 # PostgreSQL DB for production
