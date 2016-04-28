@@ -10,6 +10,8 @@ gem 'sqlite3', group: [:development, :test]
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '4.5.0'
 
+gem 'devise', '3.4.1'
+
 
 # PostgreSQL DB for production
 group :production do
