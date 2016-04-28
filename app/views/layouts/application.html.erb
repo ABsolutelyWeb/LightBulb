@@ -5,6 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+/*  <style>*/
+/*    .jumbotron{*/
+/*background-image:url(http://celestinopasadena.com/wp-content/themes/cleancorp/images/background.jpg);*/
+/*background-repeat:no-repeat;*/
+/*background-position:center;*/
+/*background-size: cover;*/
+/*padding:200px 0 140px 0;*/
+/*margin-bottom:70px;*/
+/*}*/
+    
+/*  </style>*/
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -27,7 +39,9 @@
   </div>
 </nav>  
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
