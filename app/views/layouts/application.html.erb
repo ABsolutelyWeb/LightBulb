@@ -3,6 +3,8 @@
 <head>
   <title>Light Bulb</title>
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lobster+Two', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -20,7 +22,7 @@
 
 </head>
 <body>
-<div class="navbar transparent navbar-inverse">
+<div class="navbar transparent navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -44,7 +46,13 @@
           <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success navbar-btn", method: :get %>
         <% end %>
       </div>
-      <ul class="nav navbar-nav navbar-right nav-font">
+      
+      <% if controller_name === "pages" && action_name === "homepage" %>
+          <ul class="nav navbar-nav navbar-right nav-font">
+      <% else %>
+          <ul class="nav navbar-nav navbar-right nav-font-inverted">
+      <% end %>
+      
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", new_contact_path %></li>
       </ul>
@@ -52,12 +60,16 @@
   </div>
 </nav>  
 
-<div class="container">
-  <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "alert alert-#{key}" %>
-  <% end %>
+<% if controller_name === "pages" && action_name === "homepage" %>
   <%= yield %>
-</div>
+<% else %>  
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+<% end %> 
 
 </body>
 </html>

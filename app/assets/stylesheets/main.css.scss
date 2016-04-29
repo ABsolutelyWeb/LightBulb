@@ -4,6 +4,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 .navbar.transparent.navbar-inverse {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -12,7 +13,14 @@
     background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
     background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    margin-bottom: 0px;
 }
+
+.jumbotron {
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
 
 .navbar-brand.nav-font {
     color: black;
@@ -42,6 +50,24 @@
     transition: .6s;
 }
 
+.navbar-nav.nav-font-inverted li a {
+    color: red;
+    text-align: center;
+    font-family: "Lobster Two";
+    font-size: 1.6em;
+    // padding-left: 2em;
+    // padding-right: 2em;
+    width: 10em;
+    height: 3em;
+    display: block;
+    line-height: 35px;
+    -o-transition:.6s;
+    -ms-transition:.6s;
+    -moz-transition:.6s;
+    -webkit-transition:.6s;
+    transition: .6s;
+}
+
 #fa-size {
     font-size: 1.7em;
 }
@@ -49,10 +75,6 @@
 .navbar-nav.nav-font li a:hover {
     color: white;
     background: rgba(0,0,0, 0.7);
-}
-
-.jumbotron {
-    margin-top: 2em;
 }
 
 .contact-padding {
@@ -69,4 +91,8 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     // opacity: 0.9;
     background: rgba(255,255,255,0.2);
+}
+
+.jumbotron{
+    height: 100vh;
 }
