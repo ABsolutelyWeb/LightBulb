@@ -21,25 +21,31 @@
    margin-bottom: 0px;
 }
 
-
+// navbar brand properties (no hover)
 .navbar-brand.nav-font {
-    color: black;
-    font-size: 1.7em;
+    color: white;
+    font-size: 2.0em;
     font-family: "Lobster Two"
 }
 
-.navbar-brand.nav-font:hover {
-    color: black;
+#fa-size {
+    font-size: 2.0em;
 }
 
+// What happens to a navbar brand when you hover over it
+.navbar-brand.nav-font:hover {
+    color: white;
+}
+
+// navbar links display on homepage
 .navbar-nav.nav-font li a {
-    color: black;
+    color: white;
     text-align: center;
     font-family: "Lobster Two";
-    font-size: 1.6em;
+    font-size: 1.7em;
     // padding-left: 2em;
     // padding-right: 2em;
-    width: 10em;
+    width: 7em;
     height: 3em;
     display: block;
     line-height: 35px;
@@ -50,6 +56,7 @@
     transition: .6s;
 }
 
+// navbar links display on other pages
 .navbar-nav.nav-font-inverted li a {
     color: red;
     text-align: center;
@@ -68,13 +75,10 @@
     transition: .6s;
 }
 
-#fa-size {
-    font-size: 1.7em;
-}
-
+// navbar link and background properties on homepage
 .navbar-nav.nav-font li a:hover {
-    color: white;
-    background: rgba(0,0,0, 0.7);
+    color: black;
+    background: rgba(255,255,255, 0.7);
 }
 
 .contact-padding {
@@ -95,4 +99,9 @@
 
 .jumbotron{
     height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1456996290209-634ae6b8be31?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=10383ac3bab8cf49c95a064141a1a37b);
+    // background-image: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=76fba3bdb1e04cb26a02000be2fe7740);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

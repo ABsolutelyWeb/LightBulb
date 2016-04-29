@@ -6,20 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lobster+Two', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Roboto', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
-
-<!--    .jumbotron{-->
-<!--background-image:url(http://celestinopasadena.com/wp-content/themes/cleancorp/images/background.jpg);-->
-<!--background-repeat:no-repeat;-->
-<!--background-position:center;-->
-<!--background-size: cover;-->
-<!--padding:200px 0 140px 0;-->
-<!--margin-bottom:70px;-->
-<!--}-->
-
 </head>
 <body>
 <div class="navbar transparent navbar-inverse navbar-fixed-top">
@@ -33,8 +24,7 @@
       </button>
       <!--<a class="navbar-brand" href="/">Light Bulb</a>-->
       <%= link_to root_path, class: 'navbar-brand nav-font' do %>
-        <i class="fa fa-lightbulb-o" id="fa-size"></i>
-        Light Bulb
+        Light<i class="fa fa-lightbulb-o" id="fa-size"></i>Bulb
       <% end %>
     </div>  
     <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -58,7 +48,7 @@
       </ul>
     </div>
   </div>
-</nav>  
+</div>  
 
 <% if controller_name === "pages" && action_name === "homepage" %>
   <%= yield %>
