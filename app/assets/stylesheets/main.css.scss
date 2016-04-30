@@ -34,6 +34,13 @@
     font-family: "Lobster Two"
 }
 
+// navbar brand properties (no hover)
+.navbar-brand.nav-font-inverted {
+    color: black;
+    font-size: 2.0em;
+    font-family: "Lobster Two"
+}
+
 #fa-size {
     font-size: 2.0em;
 }
@@ -64,7 +71,7 @@
 
 // navbar links display on other pages
 .navbar-nav.nav-font-inverted li a {
-    color: red;
+    color: black;
     text-align: center;
     font-family: "Lobster Two";
     font-size: 1.6em;
@@ -87,6 +94,17 @@
     background: rgba(255,255,255, 0.7);
 }
 
+// navbar link and background properties on homepage
+.navbar-nav.nav-font-inverted li a:hover {
+    color: white;
+    background: rgba(0,0,0, 0.5);
+}
+
+// What happens to a navbar brand when you hover over it
+.navbar-brand.nav-font-inverted:hover {
+    color: black;
+}
+
 .contact-padding {
     margin-top: 5em;
 }
@@ -103,11 +121,208 @@
     background: rgba(255,255,255,0.2);
 }
 
-.jumbotron{
+.jumbotron.homepage{
     height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1456996290209-634ae6b8be31?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=10383ac3bab8cf49c95a064141a1a37b);
+    background-image: url(1.jpg);
+    // background-image: url(https://images.unsplash.com/photo-1456996290209-634ae6b8be31?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=10383ac3bab8cf49c95a064141a1a37b);
     // background-image: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=76fba3bdb1e04cb26a02000be2fe7740);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.jumbotron.contacts{
+    height: 100vh;
+    background-image: url(2.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lightbulb-greeting-start {
+    font-family: "Lobster Two";
+    color: rgba(255,255,255,0.9);
+    font-size: 4em;
+    text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+}
+
+#lightbulb-greeting {
+    font-family: "Lobster Two";
+    color: rgba(255,255,255,0.9);
+    font-size: 20em;
+    text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: black;
+}
+
+#plans-positioning {
+    margin-top: 8em;
+    color: white;
+}
+
+// .navbar-inverse .navbar-toggle:hover {
+//     background-color: white;
+// }
+
+// .navbar-default .navbar-toggle .icon-bar:hover {
+//     color: white;
+// }
+
+
+@media only screen and (max-width : 768px) {
+       .navbar-collapse li a { background: rgba(255,255,255,0.4); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1206px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 15em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 3em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 10em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 10em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 10em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    #lightbulb-greeting {
+        margin-top: 1em;
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 8em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        margin-top: 1em;
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #lightbulb-greeting {
+        margin-top: 1em;
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 6em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        margin-top: 1em;
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (max-height: 330px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 8em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    #lightbulb-greeting {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 6em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+    
+    #lightbulb-greeting-start {
+        font-family: "Lobster Two";
+        color: rgba(255,255,255,0.9);
+        font-size: 2em;
+        text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    }
+}
+
+
+

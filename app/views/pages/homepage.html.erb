@@ -1,26 +1,30 @@
-<div class="jumbotron text-center">
+<div class="jumbotron homepage text-center">
     <div class="container">
         <div class="row">
             <br>
-            <br>
-            <br>
-            <div class="col-md-6">
-                <div class="well">
-                    <h3 class="text-center">Free Membership</h3>
-                    <h4>Sign up for a free account to get basic Club access to view everyone's ideas.</h4>
-                    <%= link_to "Go Free", new_user_registration_path(plan: @free_plan.id), class: "btn btn-primary btn-lg btn-block" %>
+            <% if current_user %>
+                <br>
+                <h1 id="lightbulb-greeting">Light Bulb</h1>
+                <p id="lightbulb-greeting-start">Bring your ideas to light.</p>
+            <% else %>
+                <div id="plans-positioning">
+                    <div class="col-md-6">
+                        <div class="well contact-form-border">
+                            <h3 class="text-center">Free Membership</h3>
+                            <h4>Sign up for a free account to get basic Club access to view everyone's ideas.</h4>
+                            <%= link_to "Go Free", new_user_registration_path(plan: @free_plan.id), class: "btn btn-primary btn-lg btn-block" %>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="well contact-form-border">
+                            <h3 class="text-center">Premium Membership</h3>
+                            <h4>For $2 per month, go premium to see all users' contact information.</h4>
+                            <%= link_to "Go Premium", new_user_registration_path(plan: @premium_plan.id), class: "btn btn-success btn-lg btn-block" %>
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
-            <div class="col-md-6">
-                <div class="well">
-                    <h3 class="text-center">Premium Membership</h3>
-                    <h4>For $2 per month, go premium to see all users' contact information.</h4>
-                    <%= link_to "Go Premium", new_user_registration_path(plan: @premium_plan.id), class: "btn btn-success btn-lg btn-block" %>
-                </div>
-                
-            </div>
-            
+            <% end %>
         </div>
     </div>
 </div>

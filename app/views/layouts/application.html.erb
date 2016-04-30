@@ -24,10 +24,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!--<a class="navbar-brand" href="/">Light Bulb</a>-->
-      <%= link_to root_path, class: 'navbar-brand nav-font' do %>
-        Light<i class="fa fa-lightbulb-o" id="fa-size"></i>Bulb
-      <% end %>
+      
+      <% if controller_name === "pages" && action_name === "homepage" %>
+        <%= link_to root_path, class: 'navbar-brand nav-font' do %>
+          Light<i class="fa fa-lightbulb-o" id="fa-size"></i>Bulb
+        <% end %>
+      <% else %>
+        <%= link_to root_path, class: 'navbar-brand nav-font-inverted' do %>
+          Light<i class="fa fa-lightbulb-o" id="fa-size"></i>Bulb
+        <% end %>
+      <% end %>  
+        
     </div>  
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <div class = "nav navbar-nav navbar-right">
@@ -53,13 +60,15 @@
 
 <% if controller_name === "pages" && action_name === "homepage" %>
   <%= yield %>
+<% elsif controller_name === "pages" && action_name === "contacts" %>
+  <%= yield %>
 <% else %>  
-  <div class="container">
+  <!--<div class="container">-->
     <% flash.each do |key, value| %>
       <%= content_tag :div, value, class: "alert alert-#{key}" %>
     <% end %>
     <%= yield %>
-  </div>
+  <!--</div>-->
 <% end %> 
 
 </body>

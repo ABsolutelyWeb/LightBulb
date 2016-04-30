@@ -1,27 +1,31 @@
-<div class = "row">
-    <div class = "col-md-4 col-md-offset-4">
-        <div class="well contact-padding contact-form-border">
-            <%= form_for @contact do |f| %>
-                NOTE: Messaging disabled to avoid Heroku charges.
-                <br>
-                <div class="form-group">
-                    <%= f.label :name %>
-                    <%= f.text_field :name, class: 'form-control form-dimensions-contact', placeholder: "Enter name" %>
+<div class = "jumbotron contacts">
+    <div class="container">
+        <div class = "row">
+            <div class = "col-md-4 col-md-offset-4">
+                <div class="well contact-padding contact-form-border">
+                    <%= form_for @contact do |f| %>
+                        NOTE: Messaging disabled to avoid Heroku charges.
+                        <br>
+                        <div class="form-group">
+                            <%= f.label :name %>
+                            <%= f.text_field :name, class: 'form-control form-dimensions-contact', placeholder: "Enter name" %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :email %>
+                            <%= f.email_field :email, class: 'form-control form-dimensions-contact', placeholder: "Enter email" %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :comments %>
+                            <%= f.text_area :comments, class: 'form-control', placeholder: "Enter message" %>
+                        </div>
+                        
+                        <%= f.submit 'Submit', class: 'btn btn-default' %>
+                        
+                    <% end %>
                 </div>
-                
-                <div class="form-group">
-                    <%= f.label :email %>
-                    <%= f.email_field :email, class: 'form-control form-dimensions-contact', placeholder: "Enter email" %>
-                </div>
-                
-                <div class="form-group">
-                    <%= f.label :comments %>
-                    <%= f.text_area :comments, class: 'form-control', placeholder: "Enter message" %>
-                </div>
-                
-                <%= f.submit 'Submit', class: 'btn btn-default' %>
-                
-            <% end %>
+            </div>
         </div>
     </div>
 </div>
