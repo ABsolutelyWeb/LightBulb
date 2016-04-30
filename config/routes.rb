@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations'}
+  
+  # Nest resources for user profiles. 
+  # Get profile URLs nested behind user URLs
+  resources :users do
+    resource :profile
+  end
+  
+  # Contacts
   resources :contacts
+  
+  # About page
   get '/about' => 'pages#about'
+  
+  # Home Page
   root "pages#homepage"
   
   # The priority is based upon order of creation: first created -> highest priority.
