@@ -50,7 +50,11 @@
       <% else %>
           <ul class="nav navbar-nav navbar-right nav-font-inverted">
       <% end %>
-      
+        
+        <% if current_user && current_user.profile %>
+          <li><%= link_to "Profile", user_path(current_user) %><li>
+        <% end %>
+        
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", new_contact_path %></li>
       </ul>
@@ -65,6 +69,7 @@
 <% else %>  
   <!--<div class="container">-->
     <% flash.each do |key, value| %>
+      <br><br><br><br><br>
       <%= content_tag :div, value, class: "alert alert-#{key}" %>
     <% end %>
     <%= yield %>

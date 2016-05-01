@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations'}
   
   # Nest resources for user profiles. 
-  # Get profile URLs nested behind user URLs
+  # Get profile URLs nested behind user URLs.
+  # Every user has own profile.
   resources :users do
     resource :profile
   end
