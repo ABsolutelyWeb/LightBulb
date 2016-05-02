@@ -1,0 +1,16 @@
+module UsersHelper
+  # Define an icon for each user-type
+  def job_title_icon
+    if @user.profile.job_title === "Developer"
+      "<i class='fa fa-code'></i>".html_safe
+    elsif @user.profile.job_title === "Employer"
+      "<i class='fa fa-user'></i>".html_safe
+    elsif @user.profile.job_title === "Entrepreneur"
+      "<i class='fa fa-briefcase'></i>".html_safe
+    elsif @user.profile.job_title === "Hobbyist"
+      "<i class='fa fa-clock-o'></i>".html_safe
+    elsif @user.profile.job_title === "Recruiter"
+      "<i class='fa fa-user'></i>".html_safe
+    end
+  end
+end

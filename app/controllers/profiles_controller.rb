@@ -69,7 +69,7 @@ class ProfilesController < ApplicationController
   # Whitelist the form fields to make them accessible.
   private
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :job_title, :description, :contact_email, :phone_number)
+      params.require(:profile).permit(:first_name, :last_name, :job_title, :avatar, :description, :contact_email, :phone_number)
     end
     
     def only_current_user

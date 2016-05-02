@@ -7,31 +7,30 @@
                 <h1 id="lightbulb-greeting">Light Bulb</h1>
                 <p id="lightbulb-greeting-start">Bring your ideas to light.</p>
                 <% if current_user.profile %>
-                    <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: "btn btn-default" %>
+                    
                 <% else %>
                     <%= link_to "Create Profile", new_user_profile_path(current_user) if current_user %>
                 <% end %>    
                 <%= link_to "Visit the Club", "#" %>
             <% else %>
-            
-            <div>
-                <div id="plans-positioning">
-                    <div class="col-md-6">
-                        <div class="well contact-form-border">
-                            <h3 class="text-center">Free Membership</h3>
-                            <h4>Sign up for a free account to get a feel for the site and basic Club access to view everyone's ideas. You must sign up for an account in order to enter the Club.</h4>
-                            <%= link_to "Go Free", new_user_registration_path(plan: @free_plan.id), class: "btn btn-primary btn-lg btn-block" %>
+                <div>
+                    <div id="plans-positioning">
+                        <div class="col-md-6">
+                            <div class="well contact-form-border">
+                                <h3 class="text-center">Free Membership</h3>
+                                <h4>Sign up for a free account to get a feel for the site and basic Club access to view everyone's ideas. You must sign up for an account in order to enter the Club.</h4>
+                                <%= link_to "Go Free", new_user_registration_path(plan: @free_plan.id), class: "btn btn-primary btn-lg btn-block" %>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="well contact-form-border">
+                                <h3 class="text-center">Premium Membership</h3>
+                                <h4>For $2 per month, go premium to have the same access as free user, but also see all users' preferred contact information to make it easy to get in touch with them.</h4>
+                                <%= link_to "Go Premium", new_user_registration_path(plan: @premium_plan.id), class: "btn btn-success btn-lg btn-block" %>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="well contact-form-border">
-                            <h3 class="text-center">Premium Membership</h3>
-                            <h4>For $2 per month, go premium to have the same access as free user, but also see all users' preferred contact information to make it easy to get in touch with them.</h4>
-                            <%= link_to "Go Premium", new_user_registration_path(plan: @premium_plan.id), class: "btn btn-success btn-lg btn-block" %>
-                        </div>
-                    </div>
-                </div>
-            </div>    
+                </div>    
             <% end %>
         </div>
     </div>

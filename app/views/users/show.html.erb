@@ -1,16 +1,23 @@
-<br><br><br><br><br>
-<div class="container">
-  <% if current_user.plan_id == "2" %>
-    <%= @user.profile.first_name %><br>
-    <%= @user.profile.last_name %><br>
-    <%= @user.profile.job_title %><br>
-    <%= @user.profile.description %><br>
-    <%= @user.profile.contact_email %><br>
-    <%= @user.profile.phone_number %><br>
-  <% else %>
-    <%= @user.profile.first_name %><br>
-    <%= @user.profile.last_name %><br>
-    <%= @user.profile.job_title %><br>
-    <%= @user.profile.description %><br>
-  <% end %>
+<div class="jumbotron show-page-user">
+  <div class="container">
+    <div class="row">
+        <div class = "col-md-8 col-md-offset-2">
+            <div class="well contact-padding contact-form-border">
+              
+              <a href="<%= edit_user_profile_path(user_id: current_user.id) %>"><i class="fa fa-pencil-square-o fa-2x pull-right"></i></a>
+              <div class="container intro-position text-center">
+                  <%= image_tag("missing.jpg", :alt => "Missing", class: "img-style") %>
+                  <%#= image_tag @user.profile.avatar.url %>
+                  <h1 id="somea"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+                  <h3><span id="job-span"><span id="job-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %></span></h3>
+              </div>  
+              <h4>About Me:</h4> <%= @user.profile.description %>
+              <% if current_user.plan_id == 2 %>
+                <h4>My Preferred Email:</h4><%= @user.profile.contact_email %><br>
+                <h4>My Preferred Phone Number:</h4><%= @user.profile.phone_number %><br>
+              <% end %>
+            </div>
+          </div>  
+      </div>
+  </div>
 </div>
