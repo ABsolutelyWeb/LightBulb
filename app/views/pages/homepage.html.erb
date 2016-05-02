@@ -7,11 +7,10 @@
                 <h1 id="lightbulb-greeting">Light Bulb</h1>
                 <p id="lightbulb-greeting-start">Bring your ideas to light.</p>
                 <% if current_user.profile %>
-                    
-                <% else %>
-                    <%= link_to "Create Profile", new_user_profile_path(current_user) if current_user %>
+                    <%= link_to "Visit the Club", users_path, class: "btn btn-default" %>
+                <% elsif current_user %>
+                    <%= link_to "Create Your Profile to Access the Club", new_user_profile_path(current_user), class: "btn btn-default" %>
                 <% end %>    
-                <%= link_to "Visit the Club", "#" %>
             <% else %>
                 <div>
                     <div id="plans-positioning">

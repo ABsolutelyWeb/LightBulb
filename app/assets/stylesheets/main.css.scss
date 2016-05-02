@@ -116,9 +116,11 @@
 .contact-form-border {
     border-radius: 25px;
     // color: rgba(130, 130, 130, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
     // opacity: 0.9;
     background: rgba(255,255,255,0.2);
+    text-decoration: none;
+    
 }
 
 .jumbotron.homepage{
@@ -170,6 +172,20 @@
     color: white;
 }
 
+#about-padding {
+    margin-top: 2em;
+}
+
+#about-title {
+    font-family: "Lobster Two";
+    font-size: 5em;
+}
+
+#club-header {
+    font-family: "Lobster Two";
+    font-size: 6em;
+}
+
 // .navbar-inverse .navbar-toggle:hover {
 //     background-color: white;
 // }
@@ -182,6 +198,16 @@
 
 }
 
+.no-text-dec {
+    text-decoration: none;
+}
+
+body {
+    background-color: #fafafa;
+    background-image: url("http://www.transparenttextures.com/patterns/brushed-alum.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .img-style {
     border-radius: 50%;
     float: left;
@@ -192,6 +218,21 @@
 
 .container.intro-position {
 
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
 }
 
 #job-span {

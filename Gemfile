@@ -42,6 +42,8 @@ gem 'stripe', '1.16.1'
 gem 'figaro', '1.0.0'
 # User profile pictures
 gem 'paperclip', '4.2.1'
+# Automatically make CSS cross-platform
+gem 'autoprefixer-rails'
 
 
 # Use ActiveModel has_secure_password
