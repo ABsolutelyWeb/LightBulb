@@ -2,25 +2,27 @@
 <div class="col-md-8 col-md-offset-2">
     <!--<div class="container">-->
     <h1 class="text-center" id="club-header">Welcome to the Club!</h1>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled no-text-dec">
             <% @users.each do |user| %>
                 <% if user.profile %>
+                    <%= link_to(user, class: 'no-text-dec') do %>
                     <li>
-                        <div class="well row contact-form-border">
+                        <div class="well row contact-form-border no-text-dec">
                             <div class="col-sm-4 text-center">
-                                <%= link_to user do %>
+                                
                                     <%#= image_tag user.profile.avatar.url %><br>
                                     <%= image_tag("missing.jpg", :alt => "Missing") %>
-                                <% end %>
+                                
                             </div>
-                            <div>
-                                <%= link_to user do %>
+                            <div class="no-text-dec">
+                                
                                     <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
-                                <% end %>    
+                                    
                                 <p><%= user.profile.job_title %></p>
                             </div>
                         </div>
                     </li>    
+                    <% end %>
                 <% end %>
             <% end %>
         </ul>
